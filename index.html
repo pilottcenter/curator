@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>대전 로컬 카페 상품 경쟁력 강화 전문가</title>
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        body {
+
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+
+            background-color: #FFFFFF;
+
+            color: #2A2A2A;
+
+            line-height: 1.7;
+
+        }
+
+
+
+        .container {
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 0 24px;
+
+        }
+
+
+
+        /* 네비게이션 */
+
+        nav {
+
+            background: rgba(255, 255, 255, 0.98);
+
+            padding: 20px 0;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            border-bottom: 1px solid #F0F0F0;
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+
+        nav .container {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+
+
+        nav .logo {
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            color: #A87654;
+
+        }
+
+
+
+        nav ul {
+
+            display: flex;
+
+            gap: 32px;
+
+            list-style: none;
+
+        }
+
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #4A4A4A;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        nav a:hover {
+
+            color: #A87654;
+
+        }
+
+
+
+        /* 히어로 섹션 */
+
+        .hero {
+
+            padding: 100px 0 120px;
+
+            text-align: center;
+
+            background: linear-gradient(to bottom, #FAFAFA 0%, #FFFFFF 100%);
+
+        }
+
+
+
+        .hero h1 {
+
+            font-size: 42px;
+
+            font-weight: 700;
+
+            color: #1A1A1A;
+
+            line-height: 1.4;
+
+            margin-bottom: 28px;
+
+            letter-spacing: -0.02em;
+
+        }
+
+
+
+        .hero .highlight {
+
+            color: #A87654;
+
+            position: relative;
+
+            display: inline-block;
+
+        }
+
+
+
+        .hero p {
+
+            font-size: 18px;
+
+            color: #5A5A5A;
+
+            line-height: 1.8;
+
+            margin-bottom: 48px;
+
+            max-width: 700px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+        }
+
+
+
+        .hero-visual {
+
+            width: 100%;
+
+            height: 400px;
+
+            background: linear-gradient(135deg, #F5EFE7 0%, #E8DFD0 100%);
+
+            border-radius: 16px;
+
+            margin-top: 60px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 80px;
+
+            opacity: 0.6;
+
+        }
+
+
+
+        /* 섹션 공통 스타일 */
+
+        section {
+
+            padding: 100px 0;
+
+        }
+
+
+
+        section h2 {
+
+            font-size: 36px;
+
+            font-weight: 700;
+
+            text-align: center;
+
+            margin-bottom: 20px;
+
+            color: #1A1A1A;
+
+            letter-spacing: -0.02em;
+
+        }
+
+
+
+        section .subtitle {
+
+            text-align: center;
+
+            font-size: 18px;
+
+            color: #6A6A6A;
+
+            margin-bottom: 70px;
+
+            line-height: 1.6;
+
+        }
+
+
+
+        /* 문제 정의 섹션 */
+
+        .problem {
+
+            background-color: #FAFAFA;
+
+        }
+
+
+
+        .problem-cards {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+            gap: 32px;
+
+            margin-top: 60px;
+
+        }
+
+
+
+        .problem-card {
+
+            background: white;
+
+            padding: 40px 32px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+
+            transition: transform 0.3s, box-shadow 0.3s;
+
+        }
+
+
+
+        .problem-card:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+
+        }
+
+
+
+        .problem-card .icon {
+
+            font-size: 40px;
+
+            margin-bottom: 24px;
+
+        }
+
+
+
+        .problem-card h3 {
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            margin-bottom: 16px;
+
+            color: #2A2A2A;
+
+            line-height: 1.5;
+
+        }
+
+
+
+        .problem-card p {
+
+            font-size: 15px;
+
+            color: #6A6A6A;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        /* 솔루션 섹션 */
+
+        .solution {
+
+            background: linear-gradient(135deg, #A87654 0%, #8D6246 100%);
+
+            color: white;
+
+        }
+
+
+
+        .solution h2,
+
+        .solution .subtitle {
+
+            color: white;
+
+        }
+
+
+
+        .solution-content {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+            margin-top: 60px;
+
+        }
+
+
+
+        .solution-text h3 {
+
+            font-size: 24px;
+
+            margin-bottom: 24px;
+
+            font-weight: 700;
+
+        }
+
+
+
+        .solution-text p {
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            margin-bottom: 32px;
+
+            opacity: 0.95;
+
+        }
+
+
+
+        .comparison-table {
+
+            background: rgba(255,255,255,0.1);
+
+            border-radius: 12px;
+
+            padding: 32px;
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+
+        .comparison-row {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 24px;
+
+            margin-bottom: 20px;
+
+            padding-bottom: 20px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+
+        }
+
+
+
+        .comparison-row:last-child {
+
+            border-bottom: none;
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        .comparison-label {
+
+            font-weight: 600;
+
+            font-size: 14px;
+
+            opacity: 0.8;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .comparison-value {
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+        }
+
+
+
+        /* 혜택 섹션 */
+
+        .benefits {
+
+            background: white;
+
+        }
+
+
+
+        .benefit-items {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 48px;
+
+            margin-top: 60px;
+
+        }
+
+
+
+        .benefit-item {
+
+            text-align: center;
+
+            padding: 40px 24px;
+
+        }
+
+
+
+        .benefit-number {
+
+            display: inline-block;
+
+            width: 64px;
+
+            height: 64px;
+
+            background: #4B6A68;
+
+            color: white;
+
+            border-radius: 50%;
+
+            font-size: 28px;
+
+            font-weight: 700;
+
+            line-height: 64px;
+
+            margin-bottom: 28px;
+
+        }
+
+
+
+        .benefit-item h3 {
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            margin-bottom: 16px;
+
+            color: #1A1A1A;
+
+        }
+
+
+
+        .benefit-item p {
+
+            font-size: 15px;
+
+            color: #6A6A6A;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        /* 신뢰 섹션 */
+
+        .trust {
+
+            background: #FAFAFA;
+
+        }
+
+
+
+        .trust-content {
+
+            max-width: 800px;
+
+            margin: 60px auto 0;
+
+            background: white;
+
+            padding: 60px;
+
+            border-radius: 16px;
+
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+
+        }
+
+
+
+        .trust-item {
+
+            margin-bottom: 40px;
+
+        }
+
+
+
+        .trust-item:last-child {
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        .trust-item h3 {
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            color: #A87654;
+
+            margin-bottom: 16px;
+
+        }
+
+
+
+        .trust-item p {
+
+            font-size: 16px;
+
+            color: #4A4A4A;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        .testimonial {
+
+            margin-top: 48px;
+
+            padding: 32px;
+
+            background: #F8F8F8;
+
+            border-left: 4px solid #4B6A68;
+
+            border-radius: 8px;
+
+            font-style: italic;
+
+            color: #3A3A3A;
+
+        }
+
+
+
+        /* 가격 섹션 */
+
+        .pricing {
+
+            background: white;
+
+        }
+
+
+
+        .pricing-card {
+
+            max-width: 700px;
+
+            margin: 60px auto 0;
+
+            background: linear-gradient(135deg, #4B6A68 0%, #3A5452 100%);
+
+            color: white;
+
+            padding: 60px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 12px 48px rgba(75, 106, 104, 0.3);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .pricing-badge {
+
+            position: absolute;
+
+            top: 24px;
+
+            right: 24px;
+
+            background: #A87654;
+
+            color: white;
+
+            padding: 8px 20px;
+
+            border-radius: 20px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+        }
+
+
+
+        .pricing-card h3 {
+
+            font-size: 28px;
+
+            margin-bottom: 32px;
+
+        }
+
+
+
+        .price-row {
+
+            display: flex;
+
+            align-items: baseline;
+
+            gap: 16px;
+
+            margin-bottom: 32px;
+
+        }
+
+
+
+        .original-price {
+
+            font-size: 24px;
+
+            text-decoration: line-through;
+
+            opacity: 0.6;
+
+        }
+
+
+
+        .special-price {
+
+            font-size: 48px;
+
+            font-weight: 700;
+
+            color: #FFD700;
+
+        }
+
+
+
+        .discount-badge {
+
+            background: rgba(255,255,255,0.2);
+
+            padding: 6px 16px;
+
+            border-radius: 16px;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+        }
+
+
+
+        .pricing-features {
+
+            list-style: none;
+
+            margin: 32px 0;
+
+        }
+
+
+
+        .pricing-features li {
+
+            padding: 12px 0;
+
+            font-size: 16px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+
+        }
+
+
+
+        .pricing-features li:before {
+
+            content: "✓ ";
+
+            color: #FFD700;
+
+            font-weight: 700;
+
+            margin-right: 8px;
+
+        }
+
+
+
+        .pricing-note {
+
+            margin-top: 32px;
+
+            padding-top: 32px;
+
+            border-top: 1px solid rgba(255,255,255,0.2);
+
+            font-size: 14px;
+
+            opacity: 0.9;
+
+            line-height: 1.6;
+
+        }
+
+
+
+        /* CTA 섹션 */
+
+        .cta {
+
+            background: linear-gradient(135deg, #A87654 0%, #8D6246 100%);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 100px 0;
+
+        }
+
+
+
+        .cta h2 {
+
+            color: white;
+
+            margin-bottom: 24px;
+
+        }
+
+
+
+        .cta p {
+
+            font-size: 18px;
+
+            margin-bottom: 48px;
+
+            opacity: 0.95;
+
+            max-width: 700px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        .cta-buttons {
+
+            display: flex;
+
+            gap: 20px;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 18px 48px;
+
+            border-radius: 8px;
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            transition: all 0.3s;
+
+            cursor: pointer;
+
+            border: none;
+
+        }
+
+
+
+        .btn-primary {
+
+            background: white;
+
+            color: #A87654;
+
+        }
+
+
+
+        .btn-primary:hover {
+
+            background: #F5F5F5;
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+
+        }
+
+
+
+        .btn-secondary {
+
+            background: transparent;
+
+            color: white;
+
+            border: 2px solid white;
+
+        }
+
+
+
+        .btn-secondary:hover {
+
+            background: rgba(255,255,255,0.1);
+
+        }
+
+
+
+        /* 푸터 */
+
+        footer {
+
+            background: #2A2A2A;
+
+            color: #9A9A9A;
+
+            padding: 60px 0 40px;
+
+            text-align: center;
+
+        }
+
+
+
+        footer p {
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        /* 반응형 */
+
+        @media (max-width: 768px) {
+
+            .hero h1 {
+
+                font-size: 32px;
+
+            }
+
+
+
+            .hero p {
+
+                font-size: 16px;
+
+            }
+
+
+
+            section h2 {
+
+                font-size: 28px;
+
+            }
+
+
+
+            .solution-content,
+
+            .benefit-items {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .comparison-row {
+
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+
+            }
+
+
+
+            .pricing-card,
+
+            .trust-content {
+
+                padding: 40px 28px;
+
+            }
+
+
+
+            nav ul {
+
+                gap: 16px;
+
+                font-size: 13px;
+
+            }
+
+
+
+            .cta-buttons {
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+
+
+            .btn {
+
+                width: 100%;
+
+                max-width: 320px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 네비게이션 -->
+
+    <nav>
+
+        <div class="container">
+
+            <div class="logo">☕ 대전 로컬 카페 경쟁력 강화 전문가</div>
+
+            <ul>
+
+                <li><a href="#problem">문제</a></li>
+
+                <li><a href="#solution">솔루션</a></li>
+
+                <li><a href="#benefits">혜택</a></li>
+
+                <li><a href="#trust">신뢰</a></li>
+
+                <li><a href="#pricing">가격</a></li>
+
+                <li><a href="#cta">신청</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- 히어로 섹션 -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <h1>
+
+                성심당 옆 당신의 카페,<br>
+
+                기념품만으로 <span class="highlight">'줄 서는 브랜드'</span>가 될 수 있습니다.
+
+            </h1>
+
+            <p>
+
+                당신 카페의 분위기와 정체성을 담은 '고품질 패턴 굿즈'로<br>
+
+                단순한 메뉴 판매를 넘어 강력한 브랜드를 구축하세요.
+
+            </p>
+
+            <div class="hero-visual">☕</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 문제 정의 섹션 -->
+
+    <section class="problem" id="problem">
+
+        <div class="container">
+
+            <h2>대전 카페 사장님, 혹시 이런 고민을 하고 계시진 않나요?</h2>
+
+            <div class="problem-cards">
+
+                <div class="problem-card">
+
+                    <div class="icon">😥</div>
+
+                    <h3>"매출 90%가 음료/디저트입니다. 성심당처럼 '지역 대표 기념품'으로 인식되고 싶지만..."</h3>
+
+                    <p>로컬 카페 사장님들은 맛과 인테리어에 집중하지만, 경쟁력 있는 '굿즈 MD' 기획은 엄두도 못 내거나, 저품질 기성품으로 인해 브랜드 이미지 하락을 걱정합니다.</p>
+
+                </div>
+
+                <div class="problem-card">
+
+                    <div class="icon">💭</div>
+
+                    <h3>"단순 로고 박힌 굿즈는 지겹습니다. 우리 카페만의 특별한 '스토리'를 담고 싶습니다."</h3>
+
+                    <p>다른 지역에 비해 '놀 게 없다'는 인식이 강한 대전. 매장을 방문한 젊은 고객들에게 '인증샷'을 부르는 특별한 로컬 관광 경험을 제공하지 못하고 있습니다.</p>
+
+                </div>
+
+                <div class="problem-card">
+
+                    <div class="icon">🤔</div>
+
+                    <h3>"아이디어는 있지만, 굿즈 제작의 '복잡한 패턴 설계'와 '퀄리티 검수'에 자신이 없습니다."</h3>
+
+                    <p>특히 의류학과 패턴 전문가의 '정밀한 제작 기술'과 '꼼꼼한 분석력'이 없다면, 기획 단계에서 아무리 좋은 아이디어라도 실제 제품의 완성도가 떨어지기 쉽습니다.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 솔루션 섹션 -->
+
+    <section class="solution" id="solution">
+
+        <div class="container">
+
+            <h2>패턴 전문가의 정밀함으로 완성하는<br>'카페 테마 굿즈 & MD 디렉팅'</h2>
+
+            <p class="subtitle">저희 '카페/디저트 테마 굿즈 & MD 제작 디렉터'는 단순 외주 업체가 아닙니다.</p>
+
+            
+
+            <div class="solution-content">
+
+                <div class="solution-text">
+
+                    <h3>✨ 핵심 가치</h3>
+
+                    <p>귀하의 카페/베이커리의 메뉴, 인테리어, 스토리를 심층 분석하고, 의류학과 패턴 전문가의 '정밀한 제작 노하우'를 결합하여 고품질의 시그니처 굿즈를 기획 및 제작 대행합니다.</p>
+
+                    <p>고객이 음료를 마신 후에도 브랜드를 기억하게 하는 <strong>'상품 경쟁력'</strong>과 <strong>'지역 콘텐츠 가치'</strong>를 높여드립니다.</p>
+
+                </div>
+
+                
+
+                <div class="comparison-table">
+
+                    <div class="comparison-row">
+
+                        <div>
+
+                            <div class="comparison-label">Before (기존)</div>
+
+                            <div class="comparison-value">단순 로고/캐릭터만 삽입된 굿즈</div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="comparison-label">After (솔루션)</div>
+
+                            <div class="comparison-value">카페 컨셉을 모티브로 한 정밀한 패턴 디자인</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="comparison-row">
+
+                        <div>
+
+                            <div class="comparison-label">Before</div>
+
+                            <div class="comparison-value">품질 관리의 어려움 및 높은 불량률</div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="comparison-label">After</div>
+
+                            <div class="comparison-value">패턴 전문가의 꼼꼼한 품질 검수 및 제작 디렉팅</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="comparison-row">
+
+                        <div>
+
+                            <div class="comparison-label">Before</div>
+
+                            <div class="comparison-value">단발성 판매로 끝나는 부가 수익</div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="comparison-label">After</div>
+
+                            <div class="comparison-value">지역 편집샵 입점 및 온라인 판매 연계 (지속 가능한 수익 모델)</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 혜택 섹션 -->
+
+    <section class="benefits" id="benefits">
+
+        <div class="container">
+
+            <h2>당신의 카페를 '로컬 굿즈 맛집'으로 만드는 3가지 핵심 혜택</h2>
+
+            <div class="benefit-items">
+
+                <div class="benefit-item">
+
+                    <div class="benefit-number">1</div>
+
+                    <h3>시그니처 패턴 & 디자인 개발</h3>
+
+                    <p>메뉴의 색감, 인테리어의 질감 등 무형의 요소에서 패턴 아이디어를 추출하여 '오직 당신의 카페만을 위한' 독창적인 굿즈 디자인을 창조합니다. (제품의 희소성 확보)</p>
+
+                </div>
+
+                <div class="benefit-item">
+
+                    <div class="benefit-number">2</div>
+
+                    <h3>패턴 전문가의 '꼼꼼 검수' 제작 대행</h3>
+
+                    <p>굿즈 제작 시 놓치기 쉬운 마감 처리, 소재 선택, 패턴 정렬 등 디테일한 부분까지 의류 패턴 전문가가 직접 검수 및 디렉팅합니다. (최고 품질의 상품 경쟁력 보장)</p>
+
+                </div>
+
+                <div class="benefit-item">
+
+                    <div class="benefit-number">3</div>
+
+                    <h3>지역 인맥 기반 유통망 연계</h3>
+
+                    <p>제작된 굿즈를 대전 지역의 핵심 편집샵 및 온/오프라인 채널에 유통할 수 있도록 초기 관계 형성 및 입점을 지원하여 '지역 대표 기념품'으로의 인지도를 빠르게 구축합니다.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 신뢰 섹션 -->
+
+    <section class="trust" id="trust">
+
+        <div class="container">
+
+            <h2>지역 자영업자 네트워크가 보증하는 실행력</h2>
+
+            <p class="subtitle">단순 아이디어가 아닌, 시장 검증을 위한 구체적인 MVP 단계를 준비하고 있습니다.</p>
+
+            
+
+            <div class="trust-content">
+
+                <div class="trust-item">
+
+                    <h3>🎯 MVP 계획</h3>
+
+                    <p>대전 내 유의미한 트렌드를 가진 카페 1곳을 선정하여, 분위기에 맞는 맞춤 굿즈(샘플) 제안 및 실제 제작을 진행하여 기획 능력과 품질을 직접 검증합니다.</p>
+
+                </div>
+
+                
+
+                <div class="trust-item">
+
+                    <h3>🤝 협력 대상</h3>
+
+                    <p>대전 지역에서 카페를 운영하고 계신 '사장님들/자영업자 그룹'을 대상으로 직접적인 피드백을 수집하며, 잠재 고객 기반의 안정적인 B2B 영업망을 구축합니다.</p>
+
+                </div>
+
+                
+
+                <div class="trust-item">
+
+                    <h3>🚀 장기 목표</h3>
+
+                    <p>지역 토박이로서 구축한 네트워크를 활용해, 대전 카페 문화의 상품 경쟁력을 높이는 중심축이 되어 장기적인 성장을 함께합니다.</p>
+
+                </div>
+
+                
+
+                <div class="testimonial">
+
+                    📞 "가장 꼼꼼하고 트렌디한 기획을 통해, 저희 카페의 브랜드 가치를 높여줄 파트너를 찾았습니다." - 대전 카페 사장님 후기
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 가격 섹션 -->
+
+    <section class="pricing" id="pricing">
+
+        <div class="container">
+
+            <h2>'브랜드 굿즈 강화 프로젝트' 베타 테스터 특별 혜택</h2>
+
+            <p class="subtitle">귀하의 브랜드 가치를 올리는 일에 동참하실 초기 베타 파트너를 모십니다.</p>
+
+            
+
+            <div class="pricing-card">
+
+                <div class="pricing-badge">선착순 3곳 한정</div>
+
+                <h3>시그니처 굿즈 기획/패턴 개발 디렉팅</h3>
+
+                
+
+                <div class="price-row">
+
+                    <div class="original-price">300만원</div>
+
+                    <div class="special-price">99만원</div>
+
+                    <div class="discount-badge">67% 할인</div>
+
+                </div>
+
+                
+
+                <ul class="pricing-features">
+
+                    <li>카페 분석 (메뉴, 인테리어, 브랜드 스토리)</li>
+
+                    <li>패턴 디자인 원안 2종 제작</li>
+
+                    <li>제작 업체 선정 컨설팅</li>
+
+                    <li>샘플 제작 1회 검수 디렉팅</li>
+
+                </ul>
+
+                
+
+                <div class="pricing-note">
+
+                    <strong>조건:</strong> 계약 후 2주 이내 미팅 및 컨셉 확정 가능하신 분에 한해 적용됩니다. (제작 비용은 별도 청구됩니다.)<br><br>
+
+                    <strong>왜 99만원인가요?</strong> 저희 서비스의 정밀한 기획 품질과 시장 검증을 최우선으로 하기 위함입니다. 성공적인 첫 사례가 당신의 카페가 되기를 바랍니다.
